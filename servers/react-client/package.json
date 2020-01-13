@@ -4,5 +4,29 @@
   "main": "index.js",
   "repository": "https://github.com/tonyfromundefined/aws-react-ssr-demo",
   "author": "Tony Won <jeehyukwon@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --transpileOnly src/index.ts",
+    "build": "tsc && next build ./src",
+    "start": "NODE_ENV=production node ./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/connect-redis": "^0.0.13",
+    "@types/express": "^4.17.2",
+    "@types/express-session": "^1.15.16",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/redis": "^2.8.14",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "connect-redis": "^4.0.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "next": "^9.1.7",
+    "redis": "^2.8.0"
+  }
 }

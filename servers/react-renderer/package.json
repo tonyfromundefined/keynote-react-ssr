@@ -1,5 +1,5 @@
 {
-  "name": "react-client",
+  "name": "react-renderer",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/tonyfromundefined/aws-react-ssr-demo",

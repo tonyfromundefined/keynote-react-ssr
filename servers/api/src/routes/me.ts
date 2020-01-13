@@ -11,9 +11,12 @@ router.get('/', (req, res) => {
       })
   }
 
+  const _user = { ...req.user }
+  delete _user.password
+
   return res
     .status(200)
-    .json(req.user)
+    .json(_user)
 })
 
 export default router

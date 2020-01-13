@@ -1,3 +1,7 @@
 {
-  "notify": false
+  "notify": false,
+  "ignore": [
+    "node_modules",
+    "dist"
+  ]
 }

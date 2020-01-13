@@ -1,5 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next'
+import { withStore } from '../store'
 
 const PageIndex: NextPage = () => {
   return (
@@ -7,4 +8,4 @@ const PageIndex: NextPage = () => {
   )
 }
 
-export default PageIndex
+export default withStore(PageIndex)

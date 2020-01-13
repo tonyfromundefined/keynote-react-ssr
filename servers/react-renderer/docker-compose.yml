@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   redis:
-    container_name: aws-react-ssr-demo_react-client_session
+    container_name: aws-react-ssr-demo_react-renderer_session
     image: redis
     ports:
       - '54359:6379'

@@ -6,6 +6,7 @@
   "author": "Tony Won <jeehyukwon@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "bootstrap": "docker-compose up -d",
     "dev": "ts-node-dev --transpileOnly src/index.ts",
     "build": "tsc && next build ./src",
     "start": "NODE_ENV=production node ./dist/index.js"

@@ -9,7 +9,7 @@ export class Store {
     this.user = storeState.user || null
   }
 
-  async __NEXT_SERVER_INIT__(req: NextPageContext['req'], res: NextPageContext['res']) {
+  async __NEXT_SERVER_INIT__(_req: NextPageContext['req'], _res: NextPageContext['res']) {
     return
   }
 }

@@ -1,8 +1,5 @@
-import connectRedis from 'connect-redis'
 import express from 'express'
-import expressSession from 'express-session'
 import next from 'next'
-import redis from 'redis'
 import { IS_PROD } from './constants'
 import conf from './next.config'
 import { session } from './middlewares'
@@ -23,7 +20,7 @@ async function bootstrap() {
 
   app.use(session())
 
-  app.get('/health', (req, res) => res.json('ok'))
+  app.get('/health', (_req, res) => res.json('ok'))
   app.all('*', (req, res) => handle(req, res))
 
   app.listen(PORT, () => {

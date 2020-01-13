@@ -10,7 +10,7 @@ declare global {
     }
   }
 }
-export const hydrateUser: Handler = (req, res, next) => {
+export const hydrateUser: Handler = (req, _res, next) => {
   if (!req.headers.authorization) {
     return next()
   }

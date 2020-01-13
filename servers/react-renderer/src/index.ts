@@ -9,19 +9,19 @@ const PORT = IS_PROD ? 80 : 3001
 async function bootstrap() {
   const app = express()
 
-  const _next = next({
+  const renderer = next({
     conf,
     dev: !IS_PROD,
     dir: './src',
   })
-  await _next.prepare()
+  await renderer.prepare()
 
-  const handle = _next.getRequestHandler()
+  const render = renderer.getRequestHandler()
 
   app.use(session())
 
   app.get('/health', (_req, res) => res.json('ok'))
-  app.all('*', (req, res) => handle(req, res))
+  app.all('*', (req, res) => render(req, res))
 
   app.listen(PORT, () => {
     console.log('React Renderer is running on http://localhost:' + PORT)

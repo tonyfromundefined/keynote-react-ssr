@@ -16,7 +16,7 @@ async function bootstrap() {
   app.use('/auth', auth)
   app.use('/me', me)
 
-  app.get('/', (req, res) => res.json('ok'))
+  app.get('/', (_req, res) => res.json('ok'))
 
   app.listen(PORT, () => {
     console.log('API Server is running on http://localhost:' + PORT)

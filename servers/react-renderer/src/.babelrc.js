@@ -1,0 +1,14 @@
+module.exports = {
+  presets: [
+    'next/babel'
+  ],
+  plugins: [
+    ['@babel/plugin-proposal-decorators', {
+      legacy: true,
+    }],
+    ['styled-components', {
+      ssr: true,
+      displayName: true
+    }]
+  ]
+}

@@ -1,8 +1,11 @@
+import 'tsconfig-paths/register'
+
 import express from 'express'
 import next from 'next'
-import { IS_PROD } from './constants'
-import conf from './next.config'
-import { session } from './middlewares'
+import { IS_PROD } from '~/constants'
+import { session } from '~/middlewares'
+import conf from '~/next.config'
+import api from './api'
 
 const PORT = IS_PROD ? 80 : 3001
 
@@ -18,9 +21,11 @@ async function bootstrap() {
 
   const render = renderer.getRequestHandler()
 
+  app.use(express.json())
   app.use(session())
 
   app.get('/health', (_req, res) => res.json('ok'))
+  app.use('/api', api)
   app.all('*', (req, res) => render(req, res))
 
   app.listen(PORT, () => {

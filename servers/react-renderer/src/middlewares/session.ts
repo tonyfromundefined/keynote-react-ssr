@@ -1,7 +1,7 @@
 import connectRedis from 'connect-redis'
 import expressSession from 'express-session'
 import redis from 'redis'
-import { SESSION_SECRET, REDIS_HOST, REDIS_PORT, REDIS_DB } from "../constants"
+import { SESSION_SECRET, REDIS_HOST, REDIS_PORT, REDIS_DB } from '~/constants'
 
 export function session() {
   const redisClient = redis.createClient({

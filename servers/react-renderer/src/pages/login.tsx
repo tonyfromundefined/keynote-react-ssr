@@ -5,8 +5,8 @@ import styled from 'styled-components'
 import { withStore } from '~/store'
 
 const PageLogin: NextPage = () => {
-  const [username, setUsername] = useState()
-  const [password, setPassword] = useState()
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   const onUsernameChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setUsername(e.target.value)

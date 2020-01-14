@@ -32,8 +32,18 @@ router.post('/login', asyncHandler(async (req, res) => {
   }
 }))
 
-router.post('/refresh', asyncHandler(async (req, res) => {
-  const [err, result] = await to(axios.post(API_ENDPOINT + '/auth/refresh', req.body))
+router.get('/refresh', asyncHandler(async (req, res) => {
+  if (!req.session.tokens?.refreshToken) {
+    return res
+      .status(400)
+      .json({
+        error: 'Error 17929: Refresh Token is not exist',
+      })
+  }
+
+  const [err, result] = await to(axios.post(API_ENDPOINT + '/auth/refresh', {
+    refreshToken: req.session.tokens?.refreshToken,
+  }))
 
   if (result?.data?.accessToken && result?.data?.refreshToken) {
     req.session.tokens = {
@@ -50,6 +60,8 @@ router.post('/refresh', asyncHandler(async (req, res) => {
       })
 
   } else {
+    await new Promise((resolve) => req.session.destroy(() => resolve()))
+
     return res
       .status(400)
       .json({

@@ -20,7 +20,7 @@ export const hydrateUser: Handler = (req, _res, next) => {
   try {
     const payload: { userId: string } = jwt.verify(accessToken, ACCESS_TOKEN_SECRET) as any
     req.user = User.findOne({ where: { id: payload.userId }}) ?? undefined
-  } catch (error) {}
+  } catch (err) {}
 
   next()
 }

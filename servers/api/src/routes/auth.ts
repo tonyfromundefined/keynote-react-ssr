@@ -71,7 +71,7 @@ router.post('/refresh', (req, res) => {
         refreshToken,
       })
 
-  } catch (error) {
+  } catch (err) {
     return res
       .status(403)
       .json({

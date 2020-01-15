@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "community-day-api",
+  "name": "react-ssr-demo-api",
   "builds": [
     {
       "src": "src/*.ts",

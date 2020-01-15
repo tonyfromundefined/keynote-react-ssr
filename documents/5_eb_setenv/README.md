@@ -9,7 +9,7 @@
   ![](./images/screenshot-2.png)
 
 - `환경 속성`에 차례대로 값을 주입합니다.
-  - `API_ENDPOINT`는 API 서버의 엔드포인트입니다. (커뮤니티 데이 현장 데모에서는 Zeit Now를 통해 배포되어 있습니다.)
+  - `API_ENDPOINT`는 API 서버의 엔드포인트입니다. (커뮤니티데이 현장 데모에서는 Zeit Now를 통해 배포되어 있습니다.)
   - `REDIS_DB`는 `0`을 입력합니다.
   - `REDIS_HOST`는 `4. ElastiCache(Redis) 만들고 EB와 연결하기`에서 생성한 Redis의 엔드포인트를 넣습니다.
   - `REDIS_PORT`는 `6379`를 입력합니다.

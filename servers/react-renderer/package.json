@@ -8,6 +8,7 @@
   "scripts": {
     "bootstrap": "docker-compose up -d",
     "dev": "dotenv -e .env.development -- ts-node-dev --transpileOnly src/index.ts",
+    "prebuild": "rimraf ./dist",
     "build": "tsc && next build ./src",
     "start": "NODE_ENV=production pm2-runtime ecosystem.config.js"
   },
@@ -19,12 +20,16 @@
     "express-async-handler": "^1.1.4",
     "express-session": "^1.17.0",
     "jsonwebtoken": "^8.5.1",
+    "mobx": "^5.15.2",
+    "mobx-react": "^6.1.5",
     "next": "^9.1.7",
     "pm2": "^4.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "redis": "^2.8.0",
     "source-map-support": "^0.5.16",
-    "tsconfig-paths": "^3.9.0",
-    "tsconfig-paths-webpack-plugin": "^3.2.0"
+    "styled-components": "^5.0.0",
+    "tsconfig-paths": "^3.9.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.8.3",
@@ -38,12 +43,9 @@
     "@types/styled-components": "^4.4.2",
     "babel-plugin-styled-components": "1.10.2",
     "dotenv-cli": "^3.1.0",
-    "mobx": "^5.15.2",
-    "mobx-react": "^6.1.5",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "styled-components": "^5.0.0",
+    "rimraf": "^3.0.0",
     "ts-node-dev": "^1.0.0-pre.44",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.7.4"
   }
 }

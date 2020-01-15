@@ -2,6 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "target": "es5",
-    "module": "esnext"
-  }
+    "module": "esnext",
+    "noEmit": true,
+  },
 }

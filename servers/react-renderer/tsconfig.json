@@ -12,7 +12,6 @@
     "jsx": "preserve",
     "sourceMap": true,
     "outDir": "./dist",
-    "noEmit": true,
     "isolatedModules": true,
     "strict": true,
     "noUnusedLocals": false,

@@ -1,12 +1,11 @@
-import 'tsconfig-paths/register'
 import 'source-map-support/register'
 
 import express from 'express'
 import next from 'next'
-import { IS_PROD } from '~/constants'
-import { session } from '~/middlewares'
-import conf from '~/next.config'
 import api from './api'
+import { IS_PROD } from './constants'
+import { session } from './middlewares'
+import conf from './next.config'
 
 const PORT = IS_PROD ? 80 : 3001
 

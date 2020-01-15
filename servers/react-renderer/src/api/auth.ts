@@ -2,7 +2,7 @@ import to from 'await-to-js'
 import axios from 'axios'
 import { Router } from 'express'
 import asyncHandler from 'express-async-handler'
-import { API_ENDPOINT } from '~/constants'
+import { API_ENDPOINT } from '../constants'
 
 const router = Router()
 

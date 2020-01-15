@@ -1,4 +1,4 @@
-export const SESSION_SECRET = 'zimefbepormigsakacsokluhtelcif'
-export const REDIS_HOST = 'localhost'
-export const REDIS_PORT = 54359
-export const REDIS_DB = 0
+export const SESSION_SECRET = process.env.SESSION_SECRET
+export const REDIS_HOST = process.env.REDIS_HOST
+export const REDIS_PORT = Number(process.env.REDIS_PORT)
+export const REDIS_DB = Number(process.env.REDIS_DB)

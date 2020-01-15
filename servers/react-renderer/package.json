@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "bootstrap": "docker-compose up -d",
-    "dev": "ts-node-dev --transpileOnly src/index.ts",
+    "dev": "dotenv -e .env.development -- ts-node-dev --transpileOnly src/index.ts",
     "build": "tsc && next build ./src",
     "start": "NODE_ENV=production node ./dist/index.js"
   },
@@ -35,6 +35,7 @@
     "@types/redis": "^2.8.14",
     "@types/styled-components": "^4.4.2",
     "babel-plugin-styled-components": "1.10.2",
+    "dotenv-cli": "^3.1.0",
     "mobx": "^5.15.2",
     "mobx-react": "^6.1.5",
     "react": "^16.12.0",

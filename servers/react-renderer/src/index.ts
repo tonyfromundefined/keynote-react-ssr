@@ -21,10 +21,11 @@ async function bootstrap() {
 
   const render = renderer.getRequestHandler()
 
+  app.get('/health', (_req, res) => res.json('ok'))
+
   app.use(express.json())
   app.use(session())
 
-  app.get('/health', (_req, res) => res.json('ok'))
   app.use('/api', api)
   app.all('*', (req, res) => render(req, res))
 

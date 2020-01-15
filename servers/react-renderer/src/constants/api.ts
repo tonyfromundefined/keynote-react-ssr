@@ -1,1 +1,1 @@
-export const API_ENDPOINT = 'https://community-day-api.now.sh'
+export const API_ENDPOINT = process.env.API_ENDPOINT

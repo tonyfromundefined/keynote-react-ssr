@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'aws-react-ssr-demo-react-renderer',
+      name: 'aws-ssr-demo-renderer',
       script: './dist/index.js',
       autorestart: true,
       watch: false,

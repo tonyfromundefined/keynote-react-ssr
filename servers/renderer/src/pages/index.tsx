@@ -14,7 +14,7 @@ const PageIndex: NextPage = () => {
         return
       }
 
-      const result = await store.api.get(API_ENDPOINT + '/me')
+      const result = await store.api.get('/me')
       console.log(result)
     }, 1000)
 

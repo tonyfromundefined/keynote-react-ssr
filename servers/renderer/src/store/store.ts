@@ -9,6 +9,9 @@ import { User } from '~/types'
 export const SECOND = 1000
 
 export class Store {
+  env: {
+    API_ENDPOINT: string
+  } | null
   user: User | null
   accessToken: string | null
 
@@ -17,12 +20,18 @@ export class Store {
   constructor(storeState: Partial<Store>) {
     this.user = storeState.user || null
     this.accessToken = storeState.accessToken || null
+    this.env = storeState.env || null
 
     if (IS_SERVER) {
       this.api = null
+      this.env = {
+        API_ENDPOINT,
+      }
 
     } else {
-      this.api = axios.create()
+      this.api = axios.create({
+        baseURL: this.env?.API_ENDPOINT || undefined,
+      })
       this.api.interceptors.request.use(async (config) => {
         if (!this.accessToken) {
           return config

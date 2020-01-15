@@ -1,31 +1,43 @@
 # ElastiCache(Redis) 만들고 EB와 연결하기
-- AWS Console에서 Elastic Beanstalk 항목으로 이동합니다.
-  ![](./images/screenshot-0.png)
-
-- `aws-ssr-demo-renderer-production`을 클릭합니다.
+- AWS Console에서 CloudFront 항목으로 이동합니다.
   ![](./images/screenshot-1.png)
 
-- `구성`탭에서 `소프트웨어` 항목의 `수정` 버튼을 클릭합니다.
+- `Create Distribution`을 클릭합니다.
   ![](./images/screenshot-2.png)
 
-- `환경 속성`에 차례대로 값을 주입합니다.
-  - `API_ENDPOINT`는 API 서버의 엔드포인트입니다. (커뮤니티 데이 현장 데모에서는 Zeit Now를 통해 배포되어 있습니다.)
-  - `REDIS_DB`는 `0`을 입력합니다.
-  - `REDIS_HOST`는 `4. ElastiCache(Redis) 만들고 EB와 연결하기`에서 생성한 Redis의 엔드포인트를 넣습니다.
-  - `REDIS_PORT`는 `6379`를 입력합니다.
-  - `SESSION_SECRET`은 Secret으로 사용할 임의의 문자열을 입력합니다.
-  - `적용` 버튼을 클릭합니다.
+- `Web` 항목의 `Get Started`를 클릭합니다.
   ![](./images/screenshot-3.png)
 
-- 적용 중...
+- `Origin Domain Name`에 아까 생성한 EB 환경을 선택합니다.
   ![](./images/screenshot-4.png)
+
+- `Viewer Protocol Policy` 항목을 `Redirect HTTP to HTTPS`로 선택합니다.
+- `Allowed HTTP Methods` 항목을 `GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE`를 선택합니다.
+- `Object Caching` 항목을 `Customize`로 선택합니다.
+- `Minimum TTL`, `Maximum TTL`, `Default TTL`을 모두 `0`으로 설정합니다.
   ![](./images/screenshot-5.png)
 
-## 다음으로
-0. 의존성 설치 및 프로젝트 빌드하기
-1. IAM 사용자 만들기
-2. EB CLI를 통해 EB 어플리케이션 만들기
-3. EB CLI를 통해 EB 환경 만들기
-4. ElastiCache(Redis) 만들고 EB와 연결하기
-5. EB에 환경변수 주입하기
-6. **CloudFront로 정적 자원 제공 가속화하기** [이동하기](../documents/6_cloudfront/README.md)
+- `Forward Cookies` 항목을 `Whitelist`로 선택합니다.
+- `Whitelist Cookies`에 `connect.sid`를 적어넣습니다.
+  ![](./images/screenshot-6.png)
+
+- `Create Distribution` 버튼을 클릭합니다.
+  ![](./images/screenshot-7.png)
+
+- Distribution 목록으로 돌아오면, 방금 만들어진 항목을 선택합니다.
+  ![](./images/screenshot-8.png)
+
+- `Behaviors` 탭으로 이동한 뒤 `Create Behavior`를 선택합니다.
+  ![](./images/screenshot-9.png)
+
+- `Path Pattern`에 `/_next/*`를 입력합니다.
+- `Viewer Protocol Policy`를 `Redirect HTTP to HTTPS`로 설정합니다.
+  ![](./images/screenshot-10.png)
+
+- 나머지는 모두 기본값으로 둔 뒤, 하단의 `Create`를 클릭합니다.
+  ![](./images/screenshot-11.png)
+
+## 모든 설정이 완료되었습니다! 🎉🎉🎉
+CloudFront의 Domain Name으로 접속해 잘 작동하는지 확인합니다. 또, EB 엔드포인트와 퍼포먼스 차이를 비교해봅니다.
+
+- 처음으로 돌아가기 [이동하기](../../README.md)

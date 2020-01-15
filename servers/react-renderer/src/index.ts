@@ -1,4 +1,5 @@
 import 'tsconfig-paths/register'
+import 'source-map-support/register'
 
 import express from 'express'
 import next from 'next'

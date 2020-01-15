@@ -22,7 +22,7 @@
 
 ## 다음으로
 0. 의존성 설치 및 프로젝트 빌드하기
-1. **IAM 사용자 만들기** [이동하기](../documents/1_iam/README.md)
+1. **IAM 사용자 만들기** [이동하기](../1_iam/README.md)
 2. EB CLI를 통해 EB 어플리케이션 만들기
 3. EB CLI를 통해 EB 환경 만들기
 4. ElastiCache(Redis) 만들고 EB와 연결하기

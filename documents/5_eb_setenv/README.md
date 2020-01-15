@@ -28,4 +28,4 @@
 3. EB CLI를 통해 EB 환경 만들기
 4. ElastiCache(Redis) 만들고 EB와 연결하기
 5. EB에 환경변수 주입하기
-6. **CloudFront로 정적 자원 제공 가속화하기** [이동하기](../documents/6_cloudfront/README.md)
+6. **CloudFront로 정적 자원 제공 가속화하기** [이동하기](../6_cloudfront/README.md)

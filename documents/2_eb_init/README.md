@@ -24,7 +24,7 @@
 0. 의존성 설치 및 프로젝트 빌드하기
 1. IAM 사용자 만들기
 2. EB CLI를 통해 EB 어플리케이션 만들기
-3. **EB CLI를 통해 EB 환경 만들기** [이동하기](../documents/3_eb_create/README.md)
+3. **EB CLI를 통해 EB 환경 만들기** [이동하기](../3_eb_create/README.md)
 4. ElastiCache(Redis) 만들고 EB와 연결하기
 5. EB에 환경변수 주입하기
 6. CloudFront로 정적 자원 제공 가속화하기

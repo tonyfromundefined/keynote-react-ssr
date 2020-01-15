@@ -20,4 +20,10 @@
 - EB CLI 설치하기 [다운로드](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb-cli3.html)
 
 ## 시작하기
-- EB CLI를 통해 Elastic Beanstalk
+0. **의존성 설치 및 프로젝트 빌드하기** [시작하기](./documents/0_install_and_build/README.md)
+1. IAM 사용자 만들기
+2. EB CLI를 통해 EB 어플리케이션 만들기
+3. EB CLI를 통해 EB 환경 만들기
+4. ElastiCache(Redis) 만들고 EB와 연결하기
+5. EB에 환경변수 주입하기
+6. CloudFront로 정적 자원 제공 가속화하기

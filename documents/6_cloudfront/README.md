@@ -1,4 +1,4 @@
-# ElastiCache(Redis) 만들고 EB와 연결하기
+# CloudFront로 정적 자원 제공 가속화하기
 - AWS Console에서 CloudFront 항목으로 이동합니다.
   ![](./images/screenshot-1.png)
 

@@ -1,4 +1,4 @@
-# CloudFront로 정적 자원 제공 가속화하기
+# EB에 환경변수 주입하기
 - AWS Console에서 Elastic Beanstalk 항목으로 이동합니다.
   ![](./images/screenshot-0.png)
 

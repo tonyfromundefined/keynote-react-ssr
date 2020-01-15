@@ -8,21 +8,6 @@ import { API_ENDPOINT } from '~/constants'
 const PageIndex: NextPage = () => {
   const store = useStore()
 
-  useEffect(() => {
-    const interval = setInterval(async () => {
-      if (!store.isAuthenticated || !store.api) {
-        return
-      }
-
-      const result = await store.api.get('/me')
-      console.log(result)
-    }, 1000)
-
-    return () => {
-      clearInterval(interval)
-    }
-  }, [])
-
   const onLogoutButtonClick = async () => {
     await axios.get('/api/auth/logout')
     location.reload()

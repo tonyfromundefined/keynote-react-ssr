@@ -1,6 +1,8 @@
+const withCSS = require('@zeit/next-css')
+const withOptimizedImage = require('next-optimized-images')
 const path = require('path')
 
-module.exports = {
+module.exports = withCSS(withOptimizedImage({
   distDir: '../dist/.next',
   webpack(config) {
     const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
@@ -13,4 +15,4 @@ module.exports = {
 
     return config
   },
-}
+}))

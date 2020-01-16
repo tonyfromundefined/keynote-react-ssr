@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: #212529;
+  cursor: default;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  user-select: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

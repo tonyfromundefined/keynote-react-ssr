@@ -2,6 +2,7 @@ import '../global.css'
 
 import axios from 'axios'
 import { NextPage } from 'next'
+import Head from 'next/head'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import LogoImage from '~/assets/aws.svg'
@@ -30,6 +31,9 @@ const PageLogin: NextPage = () => {
 
   return (
     <Container>
+      <Head>
+        <title>AWS Community Day Seoul 2020</title>
+      </Head>
       <Link href='/' passHref>
         <a>
           <Logo src={LogoImage} />

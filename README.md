@@ -1,5 +1,5 @@
 # ☁ React.js 개발자를 위한 SSR 앱 개발 및 배포하기 - Demo
-### in AWS Community Day Seoul 2020
+### in AWS Community Day Seoul 2020 - [발표자료](./deck.pdf)
 > React.js에 익숙한 개발자를 대상으로 Session을 활용한 Store Hydration, CloudFront를 활용한 성능 최적화 등 SSR 어플리케이션 배포 방법 및 노하우에 대해 데모와 함께 차근차근 소개합니다 - [웹사이트](https://pages.awscloud.com/aws-community-day-seoul-2020/)
 >
 > 🖋 Written with 🔥 by [Tony](https://github.com/tonyfromundefined)

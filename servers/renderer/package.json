@@ -15,7 +15,7 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "await-to-js": "^2.1.1",
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "connect-redis": "^4.0.3",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",

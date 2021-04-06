@@ -8174,9 +8174,9 @@ svgo@^1.0.5:
     util.promisify "~1.0.0"
 
 systeminformation@^4.14.16:
-  version "4.19.1"
-  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-4.19.1.tgz#2f43204152feaf55d8692b61b855f16287817115"
-  integrity sha512-6Jb+0aepgRb2B4vFgxKKcrr8QexhERkPX1z0EzIyCKDMQjILt+ZbNtFxrGjFwa67tn9Wbqs1L5t/CjCUwB1FcA==
+  version "4.34.19"
+  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-4.34.19.tgz#c5f066cc043482686d95bbc554d52e6ec9e42367"
+  integrity sha512-ssUYQ0s1FFeb8EGtyCX/41cC/XaF84gbNAUfaUTziibx+xCAaR0zrOy0yZlnUrsWDQ+snp/Utl8cx8IdtrevrA==
 
 tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"
